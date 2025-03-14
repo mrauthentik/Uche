@@ -1,14 +1,21 @@
-
 import './App.css'
+import Hero from "@/components/hero"
+import About from "@/components/about"
+import Skills from "@/components/skills"
+import Projects from "@/components/projects"
+import Contact from "@/components/contact"
+import Footer from "@/components/footer"
 
-function App() {
-  
-
+export default function Home() {
   return (
-   <div> 
-    
-   </div>
+    <main className="min-h-screen">
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
   )
 }
 
-export default App
