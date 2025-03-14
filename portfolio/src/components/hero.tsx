@@ -1,4 +1,3 @@
-"use client"
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
@@ -35,9 +34,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="block">
-            Hi, I'm <span className="text-primary">John Doe</span>
+            Hi, I'm <span className="text-primary">Umoke Uchenna</span>
           </span>
-          <span className="block mt-2">Full Stack Developer</span>
+          <span className="block mt-2">Front End Developer</span>
         </motion.h1>
 
         <motion.p
