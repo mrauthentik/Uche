@@ -16,12 +16,29 @@ export default function Contact() {
     message: "",
   })
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormState((prev) => ({ ...prev, [name]: value }))
+  interface FormState {
+    name: string
+    email: string
+    message: string
   }
 
-  const handleSubmit = (e) => {
+  interface ChangeEvent {
+    target: {
+      name: string
+      value: string
+    }
+  }
+
+  const handleChange = (e: ChangeEvent) => {
+    const { name, value } = e.target
+    setFormState((prev: FormState) => ({ ...prev, [name]: value }))
+  }
+
+  interface SubmitEvent {
+    preventDefault: () => void
+  }
+
+  const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault()
     // In a real application, you would handle form submission here
     console.log("Form submitted:", formState)
